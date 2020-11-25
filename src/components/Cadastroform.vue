@@ -1,5 +1,6 @@
 <template>
   <v-row>
+    <!-- <span v-if="checaCPF === false">CPF inválido</span> -->
     <v-col cols="12">
       <v-card>
         <v-card-text class="pt-0">
@@ -58,7 +59,6 @@
                 tile
                 block
                 color="green"
-                dark
                 @click.stop="cadastrarUsuario()"
               >
                 <v-icon left>mdi-content-save</v-icon>Cadastrar
@@ -87,12 +87,22 @@ export default {
   }),
   mounted() {
     //cpf.isValid(this.usuario.cpf);
-    console.log(cpf.isValid(this.usuario.cpf));
+    // console.log(cpf.isValid(this.usuario.cpf));
   },
   computed: {
     checaCPF() {
       return cpf.isValid(this.usuario.cpf);
     },
+  },
+
+  methods: {
+    cadastrarUsuario(){
+      if (this.checaCPF === false) {
+        this.usuario.cpf = "";
+        return alert('CPf inválido')
+
+      }
+    }
   },
 };
 </script>
