@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="Login">
     
-    <Footer />
+    <Foooter />
   </div>
 </template>
 
