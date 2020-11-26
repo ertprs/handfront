@@ -5,16 +5,6 @@
         <v-card-text class="pt-2">
           <v-form autocomplete="off">
             <v-row justify="center">
-              <v-col cols="3" sm="9">
-                <v-text-field
-                  v-model.trim="usuario.nome"
-                  label="Nome completo"
-                  type="text"
-                  autocomplete="off"
-                  outlined
-                  hide-details
-                />
-              </v-col>
               
               <v-col cols="12" sm="12" md="9">
                 <v-text-field
@@ -29,24 +19,13 @@
               </v-col>
               <v-col cols="12" sm="12" md="9">
                 <v-text-field
-                  v-model.trim="usuario.email"
-                  label="Email"
-                  inputmode="email"
-                  type="text"
+                  v-model.trim="usuario.senha"
+                  label="Senha"
+                  inputmode="senha"
+                  type="password"
                   autocomplete="off"
                   outlined
                   hide-details
-                />
-              </v-col>
-              <v-col cols="12" sm="12" md="9">
-                <v-text-field
-                  v-model.trim="usuario.usuario"
-                  label="Usuário"
-                  type="text"
-                  autocomplete="off"
-                  outlined
-                  hide-details
-                  @input="sanitizeString()"
                 />
               </v-col>
             </v-row>
@@ -74,7 +53,7 @@
 import { cpf } from "cpf-cnpj-validator";
 
 export default {
-  name: "Cadastroform",
+  name: "Loginform",
 
   data: () => ({
     usuario: {
