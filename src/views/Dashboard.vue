@@ -1,16 +1,16 @@
 <template>
   <div class="Dashboard">
-    <Navigation />
+    <Nav />
   </div>
 </template>
 
 <script>
-import Navigation from "../components/Navigation";
-
+import Nav from "@/components/Nav.vue";
 export default {
   name: "Dasboard",
   components: {
-    Navigation,
+    Nav
+    
   },
 };
 </script>

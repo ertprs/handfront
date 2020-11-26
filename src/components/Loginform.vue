@@ -2,10 +2,14 @@
   <v-row>
     <v-col cols="3">
       <v-card>
+        <v-img
+          max-height="150"
+          max-width="170"
+          src="../assets/logo.svg"
+        ></v-img>
         <v-card-text class="pt-2">
           <v-form autocomplete="off">
             <v-row justify="center">
-              
               <v-col cols="12" sm="12" md="9">
                 <v-text-field
                   v-model.trim="usuario.cpf"
@@ -15,7 +19,7 @@
                   outlined
                   hide-details
                 />
-              <span v-if="checaCPF === false">CPF inválido</span>
+                <span v-if="checaCPF === false">CPF inválido</span>
               </v-col>
               <v-col cols="12" sm="12" md="9">
                 <v-text-field
@@ -34,11 +38,7 @@
         <v-card-actions>
           <v-row justify="center">
             <v-col cols="12" sm="5">
-             <v-btn
-                color="primary"
-                elevation="2"
-                medium
-              >Cadastrar</v-btn>
+              <v-btn color="primary" elevation="2" medium>Cadastrar</v-btn>
             </v-col>
           </v-row>
         </v-card-actions>
@@ -74,13 +74,12 @@ export default {
   },
 
   methods: {
-    cadastrarUsuario(){
+    cadastrarUsuario() {
       if (this.checaCPF === false) {
         this.usuario.cpf = "";
-        return alert('CPf inválido')
-
+        return alert("CPf inválido");
       }
-    }
+    },
   },
 };
 </script>
