@@ -66,7 +66,6 @@ export default {
 }
 
 .sidebar-backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
   position: fixed;
