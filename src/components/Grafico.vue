@@ -23,7 +23,7 @@
     </v-card-text>
 
     <v-card-text>
-      <div class="display-1 font-weight-thin">
+      <div class="display-1 font-weight-bold">
         Vendas nas últimas 24h
       </div>
     </v-card-text>
@@ -56,3 +56,11 @@
     }),
   }
 </script>
+
+<style scoped>
+.v-card{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+</style>

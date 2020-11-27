@@ -1,32 +1,38 @@
 <template>
-    <div class="generalheader">
-      <h1 id="title">HANDFUL COXINHAS</h1>
+  <div class="generalheader">
+    <div class="center">
+        <h1 id="title">HANDFULL COXINHAS</h1>
     </div>
+    <div class="right">
+        <h1 id="id">Chuck Norris</h1>
+        <p>ADMIN</p>              
+    </div>
+    <img src="../assets/chuck.svg" alt="Chuck Norris"> 
+  </div>
 </template>
 
 <script>
-  export default {
-    name: "GeneralHeader",
-  
-}
+
+export default {
+  name: "GeneralHeader",
+};
 </script>
 
-<style scoped>  
-
+<style scoped>
 .generalheader {
   position: fixed;
   top: 0%;
-  left:0%;
-  background-color: #FC4954;
+  left: 0%;
+  background-color: #fc4954;
   height: 10vh;
-  width: 100vw; 
+  width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: left;
-  z-index: 5;  
+  justify-content: center;
+  z-index: 5;
 }
-.generalheader h1 {
-  padding-left: 31px;
+#title {
+  padding-left: 450px;
   font-family: DM Sans;
   font-style: normal;
   font-weight: 700;
@@ -34,7 +40,37 @@
   line-height: 35px;
   align-items: center;
   text-align: center;
+  justify-content: center;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: white;
+}
+#id {
+  display: block;
+  justify-content: right;
+  align-items: center;
+  margin-left: 260px;
+  padding-top: 10px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 26px;
+  text-align: right;
+  letter-spacing: 0.01em;
+  color: white;
+}
+p {
+font-family: DM Sans;
+font-style: normal;
+font-weight: 900;
+font-size: 0.8rem;
+line-height: 14px;
+text-align: right;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+color: white;
+}
+img {
+    margin-left: 20px;
 }
 </style>

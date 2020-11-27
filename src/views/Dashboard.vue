@@ -1,25 +1,32 @@
 <template>
   <div class="Dashboard">
+    <Burguer />
     <GeneralHeader />
-    <Nav />
+    <Sidebar />
     <Grafico />
     
   </div>
 </template>
 
 <script>
+import Burguer from "@/components/menu/Burguer.vue";
 import GeneralHeader from "@/components/GeneralHeader.vue";
-import Nav from "@/components/Nav.vue";
-import Grafico from '../components/Grafico.vue';
+import Sidebar from "@/components/menu/Sidebar.vue";
+import Grafico from '@/components/Grafico.vue';
 export default {
   name: "Dasboard",
   components: {
+    Burguer,
     GeneralHeader,
-    Nav,
+    Sidebar,
     Grafico
   },
 };
 </script>
 
 <style>
+html {
+  height: 100%;
+  overflow: hidden;
+}
 </style>
