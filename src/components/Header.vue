@@ -27,7 +27,7 @@
 }
 .topnav h1 {
   padding-left: 31px;
-  font-family: DM Sans;
+  
   font-style: normal;
   font-weight: 700;
   font-size: 1.3rem;

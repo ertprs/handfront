@@ -33,7 +33,6 @@ export default {
 }
 #title {
   padding-left: 450px;
-  font-family: DM Sans;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3rem;
@@ -50,7 +49,7 @@ export default {
   align-items: center;
   margin-left: 260px;
   padding-top: 10px;
-  font-family: DM Sans;
+ 
   font-style: normal;
   font-weight: bold;
   font-size: 1.2rem;
@@ -60,7 +59,6 @@ export default {
   color: white;
 }
 p {
-font-family: DM Sans;
 font-style: normal;
 font-weight: 900;
 font-size: 0.8rem;

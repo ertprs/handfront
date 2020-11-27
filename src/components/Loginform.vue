@@ -66,7 +66,6 @@ input {
   border: none;
   color: white;
   text-align: center;
-  font-family: DM Sans;
   font-size: 1.3rem;
   font-weight: bold;
   display: inline-block;

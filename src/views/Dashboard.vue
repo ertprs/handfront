@@ -13,6 +13,7 @@ import Burguer from "@/components/menu/Burguer.vue";
 import GeneralHeader from "@/components/GeneralHeader.vue";
 import Sidebar from "@/components/menu/Sidebar.vue";
 import Grafico from '@/components/Grafico.vue';
+
 export default {
   name: "Dasboard",
   components: {
@@ -21,6 +22,9 @@ export default {
     Sidebar,
     Grafico
   },
+  created () {
+    document.title = this.$route.meta.titulo;
+  }
 };
 </script>
 
