@@ -20,6 +20,8 @@ const routes = [
     name: 'Cadastro',
     component: () => import(/* webpackChunkName: "cadastro" */ '../views/Cadastro.vue')
   },
+
+
 ]
 
 const router = new VueRouter({

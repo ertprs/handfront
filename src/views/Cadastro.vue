@@ -1,17 +1,18 @@
 <template>
-    <div class="Cadastro">
-        <Cadastroform />
-    </div>
+  <div class="Cadastro">
+    <cadastroform />
+  </div>
 </template>
 
 <script>
 
-import Cadastroform from "@/components/Cadastroform.vue";
+import Cadastroform from '../components/Cadastroform.vue';
 
 export default {
   name: "Cadastro",
   components: {
     Cadastroform
+    
   },
 };
 </script>

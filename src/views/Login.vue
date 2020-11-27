@@ -1,19 +1,17 @@
 <template>
   <div class="Login">
-    
-    <Foooter />
+    <Loginform /> 
   </div>
 </template>
 
 <script>
-
-import Footer from '@/components/Footer.vue'
-
+import Loginform from "@/components/Loginform.vue";
 
 export default {
   name: 'Home',
   components: {
-    Footer
+    Loginform
+    
   }
 }
 </script>

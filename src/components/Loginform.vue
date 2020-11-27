@@ -1,26 +1,15 @@
 <template>
   <v-row>
-    <v-col cols="4">
+    <v-col cols="3">
       <v-card>
+        <v-img
+          max-height="150"
+          max-width="170"
+          src="../assets/logo.svg"
+        ></v-img>
         <v-card-text class="pt-2">
-          <v-img
-            max-height="150"
-            max-width="170"
-            src="../assets/logo.svg"
-          ></v-img>
           <v-form autocomplete="off">
             <v-row justify="center">
-              <v-col cols="1" sm="9">
-                <v-text-field
-                  v-model.trim="usuario.nome"
-                  label="Nome completo"
-                  type="text"
-                  autocomplete="off"
-                  outlined
-                  hide-details
-                />
-              </v-col>
-
               <v-col cols="12" sm="12" md="9">
                 <v-text-field
                   v-model.trim="usuario.cpf"
@@ -34,24 +23,13 @@
               </v-col>
               <v-col cols="12" sm="12" md="9">
                 <v-text-field
-                  v-model.trim="usuario.email"
-                  label="Email"
-                  inputmode="email"
-                  type="text"
+                  v-model.trim="usuario.senha"
+                  label="Senha"
+                  inputmode="senha"
+                  type="password"
                   autocomplete="off"
                   outlined
                   hide-details
-                />
-              </v-col>
-              <v-col cols="12" sm="12" md="9">
-                <v-text-field
-                  v-model.trim="usuario.usuario"
-                  label="Usuário"
-                  type="text"
-                  autocomplete="off"
-                  outlined
-                  hide-details
-                  @input="sanitizeString()"
                 />
               </v-col>
             </v-row>
@@ -62,9 +40,6 @@
             <v-col cols="12" sm="5">
               <v-btn color="primary" elevation="2" medium>Cadastrar</v-btn>
             </v-col>
-          </v-row>
-          <v-row justify="center">
-            <v-col cols="12" sm="12"> </v-col>
           </v-row>
         </v-card-actions>
       </v-card>
@@ -78,7 +53,7 @@
 import { cpf } from "cpf-cnpj-validator";
 
 export default {
-  name: "Cadastroform",
+  name: "Loginform",
 
   data: () => ({
     usuario: {
