@@ -1,4 +1,5 @@
 <template>
+<div class="loginForm">
   <v-row>
     <v-col cols="3">
       <v-card>
@@ -45,6 +46,7 @@
       </v-card>
     </v-col>
   </v-row>
+  </div>
 </template>
 
  
@@ -84,5 +86,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+  .loginForm {
+    width: 100vw;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+  }
 </style>
