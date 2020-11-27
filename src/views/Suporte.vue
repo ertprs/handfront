@@ -5,6 +5,10 @@
 <script>
 export default {
 
+
+created () {
+    document.title = this.$route.meta.titulo;
+  }
 }
 </script>
 

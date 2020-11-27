@@ -18,6 +18,9 @@ export default {
   components: {
     Loginform,
   },
+  created () {
+    document.title = this.$route.meta.titulo;
+  }
 };
 </script>
 

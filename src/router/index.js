@@ -12,7 +12,7 @@ const routes = [
     name: 'Login',
     component: Login,
     meta: {
-      titulo: "Login"
+      titulo: "Handfull | Login"
     }
   },
   {
@@ -20,7 +20,7 @@ const routes = [
     name: 'Dashboard',
     component: Dashboard,
     meta: {
-      titulo: "Dashboard"
+      titulo: "Handfull | Dashboard"
     }
   },
   {
@@ -28,7 +28,7 @@ const routes = [
     name: 'Estoque',
     component: Dashboard,
     meta: {
-      titulo: "Estoque"
+      titulo: "Handfull | Estoque"
     }
   },
   {
@@ -36,7 +36,7 @@ const routes = [
     name: 'Suporte',
     component: Dashboard,
     meta: {
-      titulo: "Suporte"
+      titulo: "Handfull | Suporte"
     }
   },
   {
@@ -44,7 +44,7 @@ const routes = [
     name: 'Vendas',
     component: Vendas,
     meta: {
-      titulo: "Vendas"
+      titulo: "Handfull | Vendas"
     }
   },
 
