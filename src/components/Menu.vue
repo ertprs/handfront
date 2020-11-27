@@ -3,8 +3,8 @@
     <v-navigation-drawer app fixed temporary v-model="menu">
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title"> Application </v-list-item-title>
-          <v-list-item-subtitle> subtext </v-list-item-subtitle>
+          <v-list-item-title class="title"> Menu </v-list-item-title>
+          <v-list-item-subtitle> Selecione um item </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -26,7 +26,7 @@
     <v-app-bar app color="primary" dark dense>
       <v-app-bar-nav-icon @click.stop="menu = !menu"></v-app-bar-nav-icon>
       <div class="d-flex align-center">
-        <span class="font-weight-bold" transition="scale-transition">Hand</span>
+        <span class="font-weight-bold" transition="scale-transition">Handfull Login</span>
       </div>
     </v-app-bar>
   </div>
