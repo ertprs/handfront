@@ -77,13 +77,13 @@ export default {
 
 .sidebar-panel {
   overflow-y: auto;
-  background-color: #130f40;
+
   position: fixed;
   left: 0;
   top: 10;
   height: 100vh;
   z-index: 998;
   padding: 3rem 20px 2rem 20px;
-  width: 300px;
+  width: 50vw;
 }
 </style>
