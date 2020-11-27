@@ -1,6 +1,7 @@
 <template>
   <div class="Login">
     <Header />
+    <img class="logo" src="./logo.svg" />
     <Loginform /> 
   </div>
 </template>
@@ -10,7 +11,7 @@ import Loginform from "@/components/Loginform.vue";
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'Home',
+  name: 'Login',
   components: {
     Header,
     Loginform
@@ -20,8 +21,10 @@ export default {
 </script>
 
 <style scoped>
-.Login{
-  width: 100vw;
-  height: 100vh;
+img{
+  width: 25vw;
+  position: absolute;
+  top: 30;
+  left: 37%;
 }
 </style>

@@ -1,96 +1,80 @@
 <template>
-<div class="loginForm">
-  <v-row>
-    <v-col cols="3">
-      <v-card>
-        <v-img
-          max-height="150"
-          max-width="170"
-          src="../assets/logo.svg"
-        ></v-img>
-        <v-card-text class="pt-2">
-          <v-form autocomplete="off">
-            <v-row justify="center">
-              <v-col cols="12" sm="12" md="9">
-                <v-text-field
-                  v-model.trim="usuario.cpf"
-                  label="Cpf"
-                  type="text"
-                  autocomplete="off"
-                  outlined
-                  hide-details
-                />
-                <span v-if="checaCPF === false">CPF inválido</span>
-              </v-col>
-              <v-col cols="12" sm="12" md="9">
-                <v-text-field
-                  v-model.trim="usuario.senha"
-                  label="Senha"
-                  inputmode="senha"
-                  type="password"
-                  autocomplete="off"
-                  outlined
-                  hide-details
-                />
-              </v-col>
-            </v-row>
-          </v-form>
-        </v-card-text>
-        <v-card-actions>
-          <v-row justify="center">
-            <v-col cols="12" sm="5">
-              <v-btn color="primary" elevation="2" medium>Cadastrar</v-btn>
-            </v-col>
-          </v-row>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
-  </div>
+  <form @submit="checkForm" class="formulario" action="/dashboard">
+    <h1>Login</h1>
+    <input type="text" v-model="login" name="login"> <span v-if="error"><b>Usuário inválido.</b></span>
+  </p>
+    <h1>Senha</h1>
+    <input type="password" v-model="password" name="password">
+    <button type="submit" class="login">ENTRAR</button>
+  </form>
 </template>
 
- 
-
 <script>
-import { cpf } from "cpf-cnpj-validator";
-
 export default {
-  name: "Loginform",
-
+  name: "Formulario",
   data: () => ({
-    usuario: {
-      nome: "",
-      email: "",
-      datanasc: "",
-      cpf: "",
-    },
+      login: null,
+      password: null,
+      error: false
   }),
-  mounted() {
-    //cpf.isValid(this.usuario.cpf);
-    // console.log(cpf.isValid(this.usuario.cpf));
-  },
-  computed: {
-    checaCPF() {
-      return cpf.isValid(this.usuario.cpf);
-    },
-  },
-
   methods: {
-    cadastrarUsuario() {
-      if (this.checaCPF === false) {
-        this.usuario.cpf = "";
-        return alert("CPf inválido");
-      }
-    },
-  },
-};
+    checkForm: function(e){
+      if(this.login != 'admin' && this.password != 'admin'){
+        this.error = true;
+        e.preventDefault();
+    }
+    
+  }
+}
+  
+}
 </script>
 
 <style scoped>
-  .loginForm {
-    width: 100vw;
-    position: absolute;
-    top: 15%;
-    left: 35%;
-  }
+div .formulario {
+  left:45%;
+  top: 45%;
+  margin-left:-100px;  
+  position:absolute;
+  width:200px;
+  height:100px; 
+}
+h1 {
+  font-size: 1.3rem;
+  color: #FC4954;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.015em;
+  margin-bottom: 10px;
+
+} 
+input+h1{
+  margin-top: 30px;
+}
+input {
+  background: #FFFFFF;
+  border: 1px solid #DCDCE5;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 0;
+  width: 346px;
+  height: 48px;
+}
+.login {
+  background-color: #EB5757;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  top: 20%;
+  left: 30%;
+  width: 229px;
+  height: 45px;
+}
 </style>
