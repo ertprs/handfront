@@ -1,8 +1,7 @@
 <template>
   <form @submit="checkForm" class="formulario" action="/dashboard">
     <h1>Login</h1>
-    <input type="text" v-model="login" name="login"> <span v-if="error"><b>Usuário inválido.</b></span>
-  </p>
+    <input type="text" v-model="login" name="login"> <span v-if="error"><b>Usuário ou senha inválidos.</b></span>
     <h1>Senha</h1>
     <input type="password" v-model="password" name="password">
     <button type="submit" class="login">ENTRAR</button>
@@ -19,7 +18,7 @@ export default {
   }),
   methods: {
     checkForm: function(e){
-      if(this.login != 'admin' && this.password != 'admin'){
+      if(this.login != 'admin' || this.password != 'admin'){
         this.error = true;
         e.preventDefault();
     }
