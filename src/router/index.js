@@ -20,11 +20,7 @@ const routes = [
     name: 'Cadastro',
     component: () => import(/* webpackChunkName: "cadastro" */ '../views/Cadastro.vue')
   },
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: () => import(/* webpackChunkName: "dashboard" */ '../views/Dashboard.vue')
-  },
+
 
 ]
 

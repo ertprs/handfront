@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="3">
+    <v-col cols="4">
       <v-card>
         <v-card-text class="pt-2">
           <v-img
@@ -10,7 +10,7 @@
           ></v-img>
           <v-form autocomplete="off">
             <v-row justify="center">
-              <v-col cols="3" sm="9">
+              <v-col cols="1" sm="9">
                 <v-text-field
                   v-model.trim="usuario.nome"
                   label="Nome completo"

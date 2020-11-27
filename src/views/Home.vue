@@ -1,15 +1,22 @@
 <template>
-  <div class="home">
-      
+  <div class="Home">
+    <Nav />
+    <Grafico />
+    
   </div>
 </template>
 
 <script>
-
-
+import Nav from "@/components/Nav.vue";
+import Grafico from '../components/Grafico.vue';
 export default {
-  name: 'Home',
+  name: "Dasboard",
   components: {
-  }
-}
+    Nav,
+    Grafico
+  },
+};
 </script>
+
+<style>
+</style>
