@@ -21,6 +21,9 @@ export default {
     Header,
     Loginform,
   },
+  created () {
+    document.title = this.$route.meta.titulo;
+  }
 };
 </script>
 
