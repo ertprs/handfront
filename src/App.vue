@@ -1,8 +1,8 @@
 <template>
   <v-app>
+    <Menu v-if="$route.path !== '/'" />
     <v-main>
       <v-container fluid>
-        <Menu />
         <router-view />
       </v-container>
     </v-main>
@@ -10,18 +10,16 @@
 </template>
 
 <script>
-import Menu from './components/menu/Menu.vue';
+import Menu from "./components/menu/Menu.vue";
 
 export default {
   name: "App",
 
   components: {
-     Menu
+    Menu,
   },
 
-
   data: () => ({
-    //
   }),
 };
 </script>
