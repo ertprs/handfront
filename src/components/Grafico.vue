@@ -58,9 +58,5 @@
 </script>
 
 <style scoped>
-.v-card{
-  position: absolute;
-  top: 30%;
-  left: 40%;
-}
+
 </style>

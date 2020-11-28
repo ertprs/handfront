@@ -7,7 +7,17 @@
 
       <v-spacer></v-spacer>
 
-      <span>teste</span>
+      <div class="text-right">
+        <v-list-item two-line>
+          <v-list-item-content>
+            <v-list-item-title>Chuck</v-list-item-title>
+            <v-list-item-subtitle>Admin</v-list-item-subtitle>
+          </v-list-item-content>
+          <v-list-item-avatar>
+            <img src="https://randomuser.me/api/portraits/women/81.jpg" />
+          </v-list-item-avatar>
+        </v-list-item>
+      </div>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -16,14 +26,16 @@
           v-model="group"
           active-class="primary--text text--accent-4"
         >
-
-          <v-list-item v-for="(rota, index) in rotas" :key="index" :to="rota.path">
+          <v-list-item
+            v-for="(rota, index) in rotas"
+            :key="index"
+            :to="rota.path"
+          >
             <v-list-item-icon>
-              <v-icon>{{rota.icone}}</v-icon>
+              <v-icon>{{ rota.icone }}</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>{{rota.titulo}}</v-list-item-title>
+            <v-list-item-title>{{ rota.titulo }}</v-list-item-title>
           </v-list-item>
-
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>

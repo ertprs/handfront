@@ -1,21 +1,31 @@
 <template>
-  <div class="Dashboard">
-    <Grafico />
-    
-  </div>
+    <v-row>
+      <v-col cols="12" sm="6">
+        <Grafico />
+      </v-col>
+      <v-col cols="12" sm="6">
+        <Grafico />
+      </v-col>
+      <v-col cols="12" sm="6">
+        <Grafico />
+      </v-col>
+      <v-col cols="12" sm="6">
+        <Grafico />
+      </v-col>
+    </v-row>
 </template>
 
 <script>
-import Grafico from '@/components/Grafico.vue';
+import Grafico from "@/components/Grafico.vue";
 
 export default {
   name: "Dasboard",
   components: {
-    Grafico
+    Grafico,
   },
-  created () {
+  created() {
     document.title = this.$route.meta.titulo;
-  }
+  },
 };
 </script>
 
