@@ -6,6 +6,8 @@
       <v-toolbar-title>Handful</v-toolbar-title>
 
       <v-spacer></v-spacer>
+      <v-title> {{ this.$route.meta.tela }} </v-title>
+      <v-spacer></v-spacer>
 
       <div class="text-right">
         <v-list-item two-line>
@@ -14,7 +16,7 @@
             <v-list-item-subtitle>Admin</v-list-item-subtitle>
           </v-list-item-content>
           <v-list-item-avatar>
-            <img src="https://randomuser.me/api/portraits/women/81.jpg" />
+            <img src="../../assets/chuck.svg" />
           </v-list-item-avatar>
         </v-list-item>
       </div>

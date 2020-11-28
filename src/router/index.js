@@ -20,7 +20,8 @@ const routes = [
     name: 'Dashboard',
     component: Dashboard,
     meta: {
-      titulo: "Handfull | Dashboard"
+      titulo: "Handfull | Dashboard",
+      tela: "Dashboard"
     }
   },
   {
@@ -28,7 +29,8 @@ const routes = [
     name: 'Estoque',
     component: Dashboard,
     meta: {
-      titulo: "Handfull | Estoque"
+      titulo: "Handfull | Estoque",
+      tela: "Estoque"
     }
   },
   {
@@ -36,7 +38,8 @@ const routes = [
     name: 'Suporte',
     component: Dashboard,
     meta: {
-      titulo: "Handfull | Suporte"
+      titulo: "Handfull | Suporte",
+      tela: "Suporte"
     }
   },
   {
@@ -44,8 +47,10 @@ const routes = [
     name: 'Vendas',
     component: Vendas,
     meta: {
-      titulo: "Handfull | Vendas"
+      titulo: "Handfull | Vendas",
+      tela: "Vendas"
     }
+    
   },
 
 

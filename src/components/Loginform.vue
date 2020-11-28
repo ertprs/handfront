@@ -6,7 +6,7 @@
     <h1>Senha</h1>
     <input type="password" v-model="password" name="password" @keypress.enter="realizarLogin()"/>
     <button type="button" class="login" @click.stop.prevent="realizarLogin()">
-      ENTRAR
+      Entrar
     </button>
   </form>
 </template>

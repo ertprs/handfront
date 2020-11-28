@@ -1,19 +1,18 @@
 <template>
-  <v-title>Estoque: </v-title>
+    <v-title>
+        Pedidos:
+    </v-title>
 </template>
-
+    
 <script>
 export default {
-  name: "Estoque",
-  
-  components: { 
 
-   },
 
   created () {
     document.title = this.$route.meta.titulo;
-  }
+  }  
 };
+
 </script>
 
 <style>
