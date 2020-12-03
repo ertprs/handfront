@@ -12,6 +12,12 @@
       <v-col cols="12" sm="4">
         <Sparkline />
       </v-col>
+      <v-col cols="12" sm="4">
+        <Sparkline />
+      </v-col>
+      <v-col cols="12" sm="4">
+        <Sparkline />
+      </v-col>
     </v-row>
 </template>
 

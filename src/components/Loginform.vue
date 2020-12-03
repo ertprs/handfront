@@ -5,9 +5,9 @@
     <span v-if="error"><b>Usuário ou senha inválidos.</b></span>
     <h1>Senha</h1>
     <input type="password" v-model="password" name="password" @keypress.enter="realizarLogin()"/>
-    <button type="button" class="login" @click.stop.prevent="realizarLogin()">
+    <v-btn   color="primary" elevation="2" medium class="login" @click.stop.prevent="realizarLogin()">
       Entrar
-    </button>
+    </v-btn>
   </form>
 </template>
 
@@ -63,19 +63,8 @@ input {
   height: 48px;
 }
 .login {
-  background-color: #eb5757;
-  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  display: inline-block;
   position: relative;
   top: 20%;
-  left: 30%;
-  width: 229px;
-  height: 45px;
+  left: 55%;
 }
 </style>
