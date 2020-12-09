@@ -4,35 +4,40 @@
         <Grafico />
       </v-col>
       <v-col cols="12" sm="4">
-        <Grafico />
+         <Info /> 
       </v-col>
       <v-col cols="12" sm="4">
-        <Graficopedidos />
+         
       </v-col>
       <v-col cols="12" sm="4">
-        <Sparkline />
+        
       </v-col>
       <v-col cols="12" sm="4">
-        <Sparkline />
+        <itensmaisvendidos />
+        
       </v-col>
       <v-col cols="12" sm="4">
-        <Sparkline />
+        <Total />
       </v-col>
     </v-row>
 </template>
 
 <script>
-import Grafico from "@/components/Grafico.vue";
-import Sparkline from '../components/Sparkline.vue';
-import Graficopedidos from '../components/Graficopedidos.vue';
+
+import Grafico from "@/components/Dashboard/Grafico.vue";
+import Info from '@/components/Dashboard/Info.vue';
+import Itensmaisvendidos from '@/components/Dashboard/Itensmaisvendidos.vue';
+import Total from '../components/Dashboard/Total.vue';
 
 export default {
   name: "Dasboard",
   components: {
     Grafico,
-    Sparkline,
-    Graficopedidos,
+    Info,
+    Itensmaisvendidos,
+    Total
   },
+
   created() {
     document.title = this.$route.meta.titulo;
   },

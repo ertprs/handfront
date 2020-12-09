@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Loginform from "@/components/Loginform.vue";
+import Loginform from "@/components/Login/Loginform.vue";
 
 export default {
   name: "Login",
