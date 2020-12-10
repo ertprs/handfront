@@ -1,70 +1,74 @@
 <template>
-  <form class="formulario">
-    <h1>Login</h1>
-    <input type="text" v-model="login" name="login" @keypress.enter="realizarLogin()"/>
-    <span v-if="error"><b>Usuário ou senha inválidos.</b></span>
-    <h1>Senha</h1>
-    <input type="password" v-model="password" name="password" @keypress.enter="realizarLogin()"/>
-    <v-btn   color="primary" elevation="2" medium class="login" @click.stop.prevent="realizarLogin()">
-      Entrar
-    </v-btn>
-  </form>
+  <v-card
+    class="mt-16 mx-auto"
+    width="500px"
+  > 
+    <v-form>
+      <v-container>
+        <v-row justify="center">
+          <v-col cols="12" sm="10" md="8" lg="22">
+            <v-img
+              width="200"
+              height="200"
+              class="logo"
+              src="../../assets/logo.svg"
+            ></v-img>
+            <v-divider></v-divider>
+            <v-text-field
+              outlined
+              v-model="email"
+              :rules="[rules.required, rules.email]"
+              label="E-mail"
+            ></v-text-field>
+            <v-text-field
+              :append-icon="show4 ? 'mdi-eye' : 'mdi-eye-off'"
+              outlined
+              :rules="[rules.required, rules.emailMatch]"
+              :type="show4 ? 'text' : 'password'"
+              name="input-10-2"
+              label="Senha"
+              hint="At least 8 characters"
+              value="Pa"
+              error
+              @click:append="show4 = !show4"
+            ></v-text-field>
+
+            <v-btn color="primary" elevation="2" class="mx-auto"> Entrar </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-form>
+  </v-card>
 </template>
 
 <script>
 export default {
-  name: "Formulario",
+  data() {
+    return {
+      title: "Preliminary report",
+      email: "",
+      rules: {
+        required: (value) => !!value || "Obrigatório.",
+        counter: (value) => value.length <= 20 || "Max 20 caracteres",
+        email: (value) => {
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return pattern.test(value) || "Email.";
+        },
+      },
 
-  data: () => ({
-    login: null,
-    password: null,
-    error: false,
-  }),
-
-  methods: {
-    realizarLogin() {
-      if (this.login !== "admin" || this.password !== "admin") {
-        return (this.error = true);
-      }
-
-      this.$router.push("/dashboard");
-    },
+        show1: false,
+        show2: true,
+        show3: false,
+        show4: false,
+        password: 'Password',
+        rules: {
+          required: value => !!value || 'Obrigatório.',
+          min: v => v.length >= 8 || 'Min 8 caracteres',
+          emailMatch: () => (`O email ou a senha estão errados.`),
+        },
+    };
   },
 };
 </script>
 
-<style scoped>
-div .formulario {
-  left: 45%;
-  top: 45%;
-  margin-left: -100px;
-  position: absolute;
-  width: 200px;
-  height: 100px;
-}
-h1 {
-  font-size: 1.3rem;
-  color: #fc4954;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.015em;
-  margin-bottom: 10px;
-}
-input + h1 {
-  margin-top: 30px;
-}
-input {
-  background: #ffffff;
-  border: 1px solid #dcdce5;
-  border-radius: 10px;
-  padding: 12px 20px;
-  margin: 0;
-  width: 346px;
-  height: 48px;
-}
-.login {
-  position: relative;
-  top: 20%;
-  left: 55%;
-}
-</style>
+<style lang="stylus"></style>

@@ -1,41 +1,24 @@
 <template>
-     <v-row>
-      <v-col cols="12" sm="4">
-
-      </v-col>
-      <v-col cols="12" sm="4">
-      </v-col>
-      <v-col cols="12" sm="4">
-        
-      </v-col>
-      <v-col cols="12" sm="4">
-        
-      </v-col>
-      <v-col cols="12" sm="4">
-        
-      </v-col>
-      <v-col cols="12" sm="4">
-        
-      </v-col>
-    </v-row>
+  <v-row justify="center">
+    <v-col cols="12" sm="10" md="8" lg="6">
+      <v-img
+        class="logo"
+        src="../assets/ajustes.jpg"
+      ></v-img>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
-
-import Ajuda from "@/components/Suporte/Ajuda.vue";
-
 export default {
-name: "Suporte",
-  components: {
-    Ajuda,
-  },
+  name: "Suporte",
+  components: {},
 
-created () {
+  created() {
     document.title = this.$route.meta.titulo;
-  }
-}
+  },
+};
 </script>
 
 <style>
-
 </style>
