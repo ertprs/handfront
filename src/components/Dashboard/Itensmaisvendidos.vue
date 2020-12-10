@@ -3,7 +3,6 @@
   <v-card
     width="600"
     height="364"
-    loading
   > 
         <v-toolbar
           class="mb-2"

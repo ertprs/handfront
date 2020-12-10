@@ -1,7 +1,6 @@
   
 <template>
   <v-card
-    loading
     width="600"
     height="365"
   >

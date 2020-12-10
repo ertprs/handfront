@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-card
     class="mt-16 mx-auto"
     width="500px"
@@ -39,6 +40,7 @@
       </v-container>
     </v-form>
   </v-card>
+  </div>
 </template>
 
 <script>
@@ -71,4 +73,6 @@ export default {
 };
 </script>
 
-<style lang="stylus"></style>
+<style>
+
+</style>

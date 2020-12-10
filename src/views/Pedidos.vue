@@ -1,12 +1,16 @@
-<template>
-    <v-title>
-        Pedidos:
-    </v-title>
+<template> 
+      <Tab /> 
 </template>
     
 <script>
-export default {
 
+import Tab from "@/components/tab/Tab.vue";
+
+
+export default {
+  components: {
+    Tab,
+  },
 
   created () {
     document.title = this.$route.meta.titulo;
