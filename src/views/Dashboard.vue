@@ -7,14 +7,7 @@
          <Info /> 
       </v-col>
       <v-col cols="12" sm="4">
-         
-      </v-col>
-      <v-col cols="12" sm="4">
-        
-      </v-col>
-      <v-col cols="12" sm="4">
         <itensmaisvendidos />
-        
       </v-col>
       <v-col cols="12" sm="4">
         <Total />
@@ -47,6 +40,6 @@ export default {
 <style>
 html {
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 </style>

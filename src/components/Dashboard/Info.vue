@@ -1,7 +1,6 @@
   
 <template>
   <v-card
-    max-width="600"
     loading
     width="600"
     height="365"
