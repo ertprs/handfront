@@ -11,7 +11,7 @@
             <v-img
               width="200"
               height="200"
-              class="logo"
+              class="centered"
               src="../../assets/logo.svg"
             ></v-img>
             <v-divider></v-divider>
@@ -29,8 +29,7 @@
               name="input-10-2"
               label="Senha"
               hint="At least 8 characters"
-              value="Pa"
-              error
+              
               @click:append="show4 = !show4"
             ></v-text-field>
 
